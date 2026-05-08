@@ -18,7 +18,7 @@ if st.button("Generate Backend"):
     else:
 
         response = requests.post(
-            "http://localhost:8000/generate",
+            "https://ai-backend-generator-production.up.railway.app/generate",
             data={"description": user_input,
                   "dataset_size": dataset_size
                   },
@@ -36,7 +36,7 @@ if st.button("Generate Backend"):
 
             st.success("Backend project generated!")
 
-            download_url = "http://localhost:8000/download"
+            download_url = "https://ai-backend-generator-production.up.railway.app/download"
 
             st.markdown(
                 f"[Download Backend Project]({download_url})",
